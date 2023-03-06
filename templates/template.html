@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title></title>
+    <!--
+
+    Eatery Cafe Template
+
+    http://www.templatemo.com/tm-515-eatery
+
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="static/css/templatemo-style.css">
+
+</head>
+<body>
+
+<!-- PRE LOADER -->
+<section class="preloader">
+    <div class="spinner">
+
+        <span class="spinner-rotate"></span>
+
+    </div>
+</section>
+
+
+<!-- MENU -->
+<section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+
+            <!-- lOGO TEXT HERE -->
+<!--            <a href="index.html" class="navbar-brand">Cereals <span>.</span> Pulses <span>.</span> Oil Seeds </a>-->
+        </div>
+
+        <!-- MENU LINKS -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-nav-first">
+                <!--                         <li><a href="#home" class="smoothScroll">Home</a></li>-->
+                <!--                         <li><a href="#about" class="smoothScroll">About</a></li>-->
+                <!--                         <li><a href="#dataset" class="smoothScroll">Dataset</a></li>-->
+                <!--                         <li><a href="#technologies" class="smoothScroll">Technologies</a></li>-->
+                <!--                         <li><a href="#classify" class="smoothScroll">Classify</a></li>-->
+            </ul>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HOME -->
+<section id="home" class="slider" data-stellar-background-ratio="0.5">
+    <div class="row">
+
+        <div class="container mt-5">
+            <div class="slide" id="Result">
+                <div class="content fourth-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <img src=" {{url_for('send_image', filename=image_name)}}" style="width:530px;height:300px;"><br>
+                                    <h2 style="color:green; width:380px;">{{ text }} {{ a }}</h2>
+                                    <h3>
+                                        <div><ul style="color:#228B22; ">
+                                                {% for x in msg %}
+                                                <li>{{ x }}</li>
+                                                {% endfor %}
+                                            </ul></div>
+                                        </h3>
+                                    <centre style="width:360px;"> <a style="text-decoration: none; display: block; margin: 20px auto;" class="btn btn-primary btn-block btn-large" href="upload" role="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Predict Another image</a>
+                                    </centre>
+
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- SCRIPTS -->
+<script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+<script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/smoothscroll.js')}}"></script>
+<script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</body>
+</html>
